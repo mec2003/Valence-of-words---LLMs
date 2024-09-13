@@ -1,17 +1,16 @@
-#import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt
 
-#x = []
-#y = []
+# Ler o arquivo CSV
+df = pd.read_csv('dados.csv')
 
-#with open('dados.txt', 'r') as file:
-    #for line in file: # Dividir a linha em dois números (x, y)
-        
-        #values = line.split()
-        #x.append(float(values[0]))  # Adicionar o valor de x na lista
-        #y.append(float(values[1]))  # Adicionar o valor de y na lista
+# Plotar o gráfico
+plt.plot(df['x'], df['y'])
 
-# Criar o gráfico
-#plt.plot(x, y)
+# Adicionar título e rótulos
+plt.title("Gráfico de Dados do Arquivo CSV")
+plt.xlabel("Eixo X")
+plt.ylabel("Eixo Y")
 
 # Exibir o gráfico
-#plt.show()
+plt.show()
